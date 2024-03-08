@@ -5,6 +5,13 @@
 
 
 @font-face {
+    font-family: 'Denish';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./justificado/denishdemoregular-rgbl8.ttf') format('truetype');
+  }
+
+@font-face {
     font-family: 'Roboto';
     src: url('./justificado/Roboto-Regular.ttf') format('truetype');
 }
@@ -15,8 +22,13 @@
 }
 
 @font-face {
+    font-family: 'Open Sans';
+    src: url('./justificado/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'Hack Nerd';
-    src: url('./justificado/HackNerdFont-Regular.ttf') format('truetype');
+    src: url('./justificado/HackNerdFont-Regular.ttf') format('truetype'), local('Denish');
   }
 
 html {
@@ -25,7 +37,7 @@ html {
 }
 
 body {
-    font-family: "Merryweather", "Roboto", "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    font-family: "Open Sans", "Merryweather", "Roboto","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
     color: rgb(51, 51, 51);
     line-height: 1.6;
     text-align: justify;
@@ -43,10 +55,21 @@ img {
     margin: 10px;
 }
 
-figcaption {
-    text-align:center;
-    font-size:smaller;
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > figcaption {
+        font-size:smaller;
+    }
+    
+    > img {
+        width: 90%;
+    }
 }
+
 
 #write {
     max-width: 860px;
